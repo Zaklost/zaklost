@@ -7,3 +7,6 @@ Il y a ce qui pourris à l'ombre des fichiers locaux, ce qui pourris à la péno
 Zaklost cherche ici à laisser pourrir au soleil.
 
 Cette page est surement l'entrée lettrée du compost public de Zaklost.
+
+
+- [Zak est Fatigué](zakestfatigue.html)
