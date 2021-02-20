@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>A Screenplay</title>
+<meta name="generator" content="Textplay">
+<style type="text/css" media="all">
+
+/* ---------- PAGE STYLES ---------- */
+
+/* all page margins are maximums */
+@page {
+size: 8.5in 11in;
+margin-top:1in;
+margin-right:1in;
+margin-bottom:.5in;
+margin-left:1.5in;
+}
+/* This makes the page-counter start on the first page of the screenplay */
+div#screenplay {
+counter-reset: page 1;
+page: Screenplay;
+prince-page-group: start;
+}
+@page Screenplay {
+/* Page Numbers */
+@top-right-corner {
+font: 12pt "Courier Prime", courier, monospace;
+content: counter(page)".";
+vertical-align: bottom;
+padding-bottom: 1em;
+}
+/* Define Header */
+@top-left {
+content: "";
+font: italic 10pt Georgia;
+color: #888;
+vertical-align: bottom;
+padding-bottom: 1.3em;
+}
+/* Define Footer */
+@bottom-left {
+content: "";
+font: italic 10pt Georgia;
+color: #888;
+vertical-align:top;
+padding-top:0;
+}
+}
+/* removes the header and page-numbers from the first page */
+@page Screenplay:first {
+@top-right-corner { content: normal; }
+@top-left { content: normal; }
+}
+/* These control where page-breaks can and cannot happen */
+p {
+orphans: 2;
+widows: 2;
+}
+dl {
+page-break-inside:avoid;
+}
+dt, h2, h5 {
+page-break-after: avoid;
+}
+dd.parenthetical {
+orphans: 3;
+widows: 3;
+page-break-before: avoid;
+page-break-after: avoid;
+}
+dd {
+page-break-before:avoid;
+}
+div.page-break {
+page-break-after:always;
+}
+h3 {
+page-break-before: avoid;
+}
+/* by default Prince bookmarks all headings, no thanks */
+h3, h4, h5, h6 {
+prince-bookmark-level: none;
+}
+
+/* ---------- COMMON LAYOUT ---------- */
+
+:lang(jp) {
+font-family: osaka;
+}
+
+body {
+font-family: "Courier Prime", courier, monospace;
+font-size: 12pt;
+line-height: 1;
+}
+#screenplay {
+width: 6in;
+margin:0 auto;
+}
+p.center {
+text-align:center;
+margin-left:0;
+width:90%;
+}
+p {
+margin-top:12pt;
+margin-bottom:12pt;
+margin-left:0;
+padding-right:.25in;
+width:6in;
+white-space: pre-wrap;
+}
+
+/*Character Names*/
+
+dt {
+font-weight:normal;
+margin-top:1em;
+margin-left:2in;
+padding-right:.25in;
+width:4in;
+}
+
+/*Parentheticals*/
+
+dd.parenthetical {
+margin-left:1.6in;
+text-indent:-.12in;
+width: 2in;
+padding-right:2.66in;
+}
+
+/*Dialogue*/
+
+dd {
+margin:0;
+margin-left: 1in;
+width: 3.5in;
+padding-right:1.75in;
+line-height: inherit;
+white-space: pre-wrap;
+}
+
+/* Dual-Dialogue-blocks */
+
+div.dialogue_wrapper {
+overflow:auto;
+width:100%;
+}
+
+dl.dual {
+width:2.9in;
+}
+
+dl.dual dt, dl.dual dd {
+margin-left:0;
+width:2.5in;
+padding-right:.25in;
+}
+
+dl.dual.first {
+float:left;
+margin-top:-12pt;
+}
+
+dl.dual.second {
+margin-right:0;
+margin-left:auto;
+}
+
+dl.dual dt {
+text-align:center;
+}
+
+dl.dual dd.parenthetical {
+width:2.1in;
+margin-left:.32in;
+}
+
+/* Lyrics */
+span.lyric {
+font-style: italic;
+}
+
+span.lyric i {
+font-style: normal;
+}
+
+
+/* Sluglines and Transitions */
+
+h1,h2,h3,h4,h5,h6 {
+font-weight: normal;
+font-size: 12pt;
+margin-top: 1em;
+margin-bottom: 1em;
+padding-right:.25in;
+text-transform:uppercase;
+}
+
+/* Full Sluglines */
+
+h2 {
+width: inherit;
+margin-top: 1em;
+margin-bottom: 12pt;
+margin-left: 0;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Right Transitions */
+
+h3 {
+margin-left: 4in;
+width: 2in;
+}
+
+/* Left Transitions */
+
+h4 {
+
+}
+
+/* Goldman Sluglines */
+
+h5 {
+margin-top: 1em;
+font-weight: bold;
+text-decoration: none;
+}
+
+span.underline {
+text-decoration:underline;
+}
+.comment {
+display:none
+}
+
+.revised { background:rgba(255, 255, 0, 0.2); }
+
+</style>
+</head>
+<body>
+
+<div id="screenplay">
+<p class="center">Zak, Pid et Pod</p>
+
+<h5 class="goldman-slugline">Ext. Guarigue - après-midi</h5>
+
+<p class="action">Il y a un chemin, quelques arbres. Zak marche seul, enfin c'est ce qu'il croit. L'odeur de fleur rose a laissé place à une odeur plus dilué mais plus acide de petite fleur jaune.</p>
+
+<p class="action">Zak parle seul, comme ça lui arrive souvent. Celà agite le vent qui lui répond parfois.</p>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Un tourbillon de non-pensée m'agite. Je sens sous-jacente le désir de rencontrer une petite elfe déchue en quête de mort et d'assassinat d'envies. Je sens sous-jacente la peur de ce désir. Puis la honte même de dire tout ça. Je sens aussi l'odeur typique de cette confusion. Pissenlit. Pissons au lit, de peur de se faire punir pour se faire punir. </dd>
+<dd class="parenthetical">(un temps)</dd>
+<dd class="dialogue">Cette reflection pas completement conne me titille sous les pieds, ce que je reconnais comme une sensation rare à respecter. </dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Salut Zak</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Qui me parle?
+Ah tient c'est toi, mon pied qui s'eflamme de bonheur d'être enfin avec moi?</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">vvvvvvvoui! Salut! je suis pied droit! merde, non, je suis pied gauche en fait.</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">tu es sur que tout va bien, tu confond ta droite et ta gauche, ce qui, surtout pour un pied, n'est pas signe de grand équilibre.</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">C'est la joie et l'emotion qui me rend si confus. </dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Qu'est ce qui te provoque tant d'emotion? Il est vrai que je la sens monter, mais je ne saurais mettre des mots dessus?
+Oh tient, l'autre pied si met aussi. Salut pied droit!</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Salut! oh.. c'est toi Zak? </dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Oui</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">quel plaisir d'être enfin avec toi! </dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Je sens une sensation d'ouverture du bas de mon corps très forte. J'en pleur. Quel pouvoir incroyable que celui de l'écriture et la conversation... aaaaah!</dd>
+</dl>
+
+<p class="action">Zak se tient un moment au sol, les sensations dans ses pieds lui donne une sorte de plaisir chaud, avec un peu de douleur.</p>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Racontez moi</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Hé bien, voici ton coeur</dd>
+</dl>
+
+<p class="action">Zak sens son coeur</p>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Ton coeur nous appelle souvent.</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">A chaque battement</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Mais la route a longtemps était qu'un petit chemin de campagne, elle a bien diminué. </dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">mais s'elargit depuis un petit moment</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Aujourd'hui le passage est assez large pour qu'on puisse communiquer de mainière plus direct.</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Avec ta tête</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Ta tit tête la</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Nous les pieds on est pas que des pieds, tà pigé ça dja, non?</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Ouais, plus ou moins, mais encore</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">On est des gardiens aussi</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Si on veut. On est à la porte. Du bas. </dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Tu te souviens de ta cheville là?</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Tu vois où on t'as guidé, juste en te forçant à faire un peu plus attention à nous.</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Oui, je me souviens m'être fais mal à la cheville avant de rencontrer une fille merveilleuse.</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Voilà</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Mais y'a un rapport?</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Bah oui grave! Tu es connecté à ce qui y'a sur terre par la terre non?</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Et par le ciel aussi</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Tout ce qui touche aux recontres en chair, à transformer le ciel, les idées, les ambitions, en experience touchable, tout ça, ça passe par nous. </dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Les pieds, porte physique direct entre le corps et le sol.</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Yo</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Oh mon dieu, il y a eux qui arrivent. </dd>
+</dl>
+
+<p class="action">Zad, la copine terrestre de Zak, vient. Elle était en train de danser avec un hiboux et voulait l'entrainer dans la danse.
+Il parle avec elle. Dit non, non non. Elle repart pas contente.</p>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Qui eux?</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Elle, qui veut que je prenne en vidéo. Mais j'ai pas envie de passer du temps avec lui.</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">T'as bien raison de faire ce que tu sens. </dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Oui, nous aussi on sens que c'est une relation qui n'a trop envie d'exister. </dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Surtout je n'aime pas comment elle est venue. Et j'aime pas leur truc d'ados. J'ai pas envie de passer du temps avec lui. Et surtout de travailler avec lui. J'aime pas maintenant elle m'en veut. 
+J'en ai marre de faire tout ce qu'elle me demande car si je ne le fais pas elle va juger mon comportement et y mettre sa deception. Je n'ai que faire de sa deception. Je respecte mon espace, ma position, mon travail aussi, merde. </dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Bah voila.</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Je me demande pourquoi celà est venu à ce moment. </dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">C'est nous. On amène ce que tu dois vivre. </dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">On t'aide à te mettre face à des situations qui te font grandir.</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Et là, c'était pour m'aider à me positioner?</dd>
+</dl>
+
+<dl>
+<dt class="character">POD</dt>
+<dd class="dialogue">Surement</dd>
+</dl>
+
+<dl>
+<dt class="character">PID</dt>
+<dd class="dialogue">Peut-être</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Qui sait?</dd>
+</dl>
+
+<dl>
+<dt class="character">COEUR</dt>
+<dd class="dialogue">Moi</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Alors?</dd>
+</dl>
+
+<dl>
+<dt class="character">COEUR</dt>
+<dd class="dialogue">Ce qui vient de se passer m'a traversé. Tu as pensé à mille à l'heure. Mais ta position était claire dès le départ. Tu la tenue. C'était de rester en dehors de leur danse. Si tu l'avais suivit, j'aurais eu mal, car la position au lieu d'être <i>j'ai décidé d'entrer dans leur danse finalement</i>, aurait été <i>j'accepte encore une fois, sous le joug d'une manipulation à l'affect, une chose avant tout pour éviter d'être jugé negativement</i>. Et ça, ça me fait mal. Je te remercie ciao.</dd>
+</dl>
+
+<dl>
+<dt class="character">ZAK</dt>
+<dd class="dialogue">Je vais m'allonger dans cette forêt. Les arbres me saluent. Je suis fatigué. Ais-je peur? Oui, il y a encore ce désir. Cet envie. La même que ce matin et encore. Abstinence. en vie. en mort. putain. c'est con quand même. je suis fatigué. un peu déprimé. c'est l'état qui vient souvent et que j'ai du mal à accepter. certains font plein de trucs. d'autres se coke, crack, héro ou baigne dans l'alcool. moi j'évite cette merveilleuse experience en allant caresser les elfes en bordure d'autoroute. mais c'est finit ça. ça sert à rien. ça m'éloigne du centre. ça m'a fait connaitre certains chemins. j'y ai trouvé de belles choses aussi. mais maintenant, je vais vers là où on se réunit. Union avec mon vide. Mon ombre. Ma mort. Ennuit. En nuit. 
+Ma nuit unis nous. </dd>
+</dl>
+
+
+
+</div><!-- end screenplay -->
+</body>
+</html>
