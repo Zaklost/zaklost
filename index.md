@@ -6,3 +6,5 @@ Zaklost cherche ici à laisser pourrir au soleil.
 Cette page est surement l'entrée lettrée du compost public de Zaklost.
 
 - [Zak est Fatigué](zakestfatigue.html)
+- [Zak et Brume](zaketbrume.html)
+
